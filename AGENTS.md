@@ -4,7 +4,7 @@ Bun + Turborepo monorepo; every directory under `crates/` is a workspace. Comman
 
 ## Submodules
 
-`crates/skills` (mattpocock/skills) and `crates/gstack` (garrytan/gstack) are git submodules of third-party repos, pinned to specific commits. Run `git submodule update --init --recursive` when a `crates/` directory is empty.
+`crates/mattpocock` (mattpocock/skills) and `crates/gstack` (garrytan/gstack) are git submodules of third-party repos, pinned to specific commits. Run `git submodule update --init --recursive` when a `crates/` directory is empty.
 
 - Treat submodule contents as vendored: changes belong upstream. Edits here are limited to bumping the pinned commit, committed as the gitlink change in this repo.
 - Each submodule carries its own `AGENTS.md`; follow it when working inside that directory.

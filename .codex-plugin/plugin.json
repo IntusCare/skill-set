@@ -17,7 +17,7 @@
     "domain-modeling",
     "productivity"
   ],
-  "skills": "./crates/skills/skills/engineering/",
+  "skills": "./crates/mattpocock/skills/engineering/",
   "interface": {
     "displayName": "Skill Set",
     "shortDescription": "Curated engineering skills: grilling, specs, TDD, code review",

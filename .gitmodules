@@ -1,5 +1,5 @@
-[submodule "crates/skills"]
-	path = crates/skills
+[submodule "crates/mattpocock"]
+	path = crates/mattpocock
 	url = https://github.com/mattpocock/skills.git
 [submodule "crates/gstack"]
 	path = crates/gstack
