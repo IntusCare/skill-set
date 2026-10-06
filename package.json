@@ -1,0 +1,16 @@
+{
+  "name": "skill-set",
+  "private": true,
+  "packageManager": "bun@1.4.2",
+  "workspaces": [
+    "crates/*"
+  ],
+  "scripts": {
+    "build": "turbo run build",
+    "test": "turbo run test",
+    "typecheck": "turbo run typecheck"
+  },
+  "devDependencies": {
+    "turbo": "^2"
+  }
+}
