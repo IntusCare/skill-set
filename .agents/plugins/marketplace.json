@@ -1,0 +1,20 @@
+{
+  "name": "intuscare-skill-set",
+  "interface": {
+    "displayName": "Intus Care Skill Set"
+  },
+  "plugins": [
+    {
+      "name": "skill-set",
+      "source": {
+        "source": "local",
+        "path": "./"
+      },
+      "policy": {
+        "installation": "AVAILABLE",
+        "authentication": "ON_INSTALL"
+      },
+      "category": "Coding"
+    }
+  ]
+}
