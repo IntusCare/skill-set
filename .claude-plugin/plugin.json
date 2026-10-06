@@ -44,6 +44,7 @@
     "./crates/skills/skills/productivity/teach",
     "./crates/skills/skills/productivity/to-questionnaire",
     "./crates/skills/skills/productivity/wait-what",
-    "./crates/skills/skills/productivity/writing-for-agents"
+    "./crates/skills/skills/productivity/writing-for-agents",
+    "./crates/skill-set/skills/hello-skill"
   ]
 }

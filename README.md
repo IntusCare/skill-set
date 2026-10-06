@@ -31,4 +31,17 @@ Skills are not copied into this repo. Each manifest points at the pinned `crates
 
 After bumping the submodule, update the Claude `skills` list and the Devin `requiredPlugins` sha to match.
 
+## Skills owned by this repo
+
+Repo-owned skills live in `crates/skill-set/skills/<name>/`. To ship and dogfood one:
+
+1. Add it to the Claude `skills` list in `.claude-plugin/plugin.json`.
+2. Symlink it into `.agents/skills/` so agents working in this repo load it without installing the plugin:
+
+   ```sh
+   ln -s ../../crates/skill-set/skills/<name> .agents/skills/<name>
+   ```
+
+To test the whole plugin from the working tree: `claude --plugin-dir .` (Claude Code), or `codex plugin marketplace add ./` (Codex, via `.agents/plugins/marketplace.json`).
+
 `crates/gstack` is not bundled: its skills expect gstack's own `./setup` install under `~/.claude/skills/gstack`.
