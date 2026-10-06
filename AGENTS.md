@@ -1,3 +1,19 @@
+# skill-set
+
+Bun + Turborepo monorepo; every directory under `crates/` is a workspace. Commands live in the root `package.json` scripts and `README.md`.
+
+## Submodules
+
+`crates/skills` (mattpocock/skills) and `crates/gstack` (garrytan/gstack) are git submodules of third-party repos, pinned to specific commits. Run `git submodule update --init --recursive` when a `crates/` directory is empty.
+
+- Treat submodule contents as vendored: changes belong upstream. Edits here are limited to bumping the pinned commit, committed as the gitlink change in this repo.
+- Each submodule carries its own `AGENTS.md`; follow it when working inside that directory.
+
+## Tooling
+
+- Bun is the package manager (`packageManager` in `package.json`); `bun.lock` is the lockfile.
+- Code owned by this repo goes in a new workspace under `crates/`, picked up automatically by the `crates/*` glob.
+
 <!-- BEGIN:turborepo-agent-rules -->
 
 # This is NOT the Turborepo you know
