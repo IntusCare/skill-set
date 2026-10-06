@@ -1,0 +1,22 @@
+{
+  "name": "skill-set",
+  "displayName": "Skill Set",
+  "version": "0.1.0",
+  "description": "Intus Care's curated agent skill set for real engineering: grilling, spec/ticket flows, TDD, code review, domain modelling and more.",
+  "homepage": "https://github.com/IntusCare/skill-set",
+  "keywords": [
+    "skills",
+    "engineering",
+    "tdd",
+    "code-review",
+    "domain-modeling",
+    "productivity"
+  ],
+  "requiredPlugins": [
+    {
+      "source": "github",
+      "repo": "mattpocock/skills",
+      "sha": "7a030a8b0dcaa601bb0dda9aaf174affb3d61145"
+    }
+  ]
+}

@@ -1,0 +1,17 @@
+{
+  "name": "intuscare-skill-set",
+  "owner": {
+    "name": "Intus Care",
+    "url": "https://github.com/IntusCare"
+  },
+  "description": "Intus Care's curated agent skill set, as an installable Claude Code plugin.",
+  "plugins": [
+    {
+      "name": "skill-set",
+      "source": "./",
+      "description": "Intus Care's curated agent skill set for real engineering.",
+      "category": "engineering",
+      "keywords": ["skills", "engineering", "tdd", "code-review"]
+    }
+  ]
+}
