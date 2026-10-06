@@ -15,7 +15,7 @@ bun run typecheck  # turbo run typecheck
 
 ## Installing as an agent extension
 
-This repo is a plugin for Claude Code, Devin, and OpenAI Codex. All three ship the same skills from `skills/`.
+This repo is a plugin for Claude Code, Devin, and OpenAI Codex.
 
 | Agent | Manifest | Install |
 | --- | --- | --- |
@@ -23,12 +23,12 @@ This repo is a plugin for Claude Code, Devin, and OpenAI Codex. All three ship t
 | Devin | `.devin-plugin/plugin.json` | Customize → Plugins → Add plugin → From repository → `IntusCare/skill-set`, or `devin plugins install IntusCare/skill-set` |
 | OpenAI Codex | `.codex-plugin/plugin.json`, `.agents/plugins/marketplace.json` | `codex plugin marketplace add IntusCare/skill-set`, then install `skill-set` from `/plugins` |
 
-`skills/` is generated: plugin installers don't fetch submodules or keep symlinks, so the promoted skills from `crates/skills` are copied in as real files. After bumping a submodule or the `version` in `package.json`, run:
+Skills are not copied into this repo. Each manifest points at the pinned `crates/skills` submodule:
 
-```sh
-bun run sync:skills
-```
+- **Claude Code** lists the promoted skill directories under `crates/skills/skills/` (mirrors `crates/skills/.claude-plugin/plugin.json`).
+- **Codex** takes a single `skills` path, so it points at `crates/skills/skills/engineering/` only.
+- **Devin** depends on `mattpocock/skills` at the submodule's commit through `requiredPlugins`.
 
-This re-copies the skills and stamps the version into all three manifests. Commit the result.
+After bumping the submodule, update the Claude `skills` list and the Devin `requiredPlugins` sha to match.
 
 `crates/gstack` is not bundled: its skills expect gstack's own `./setup` install under `~/.claude/skills/gstack`.

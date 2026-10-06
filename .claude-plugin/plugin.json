@@ -17,5 +17,33 @@
     "domain-modeling",
     "productivity"
   ],
-  "skills": "./skills/"
+  "skills": [
+    "./crates/skills/skills/engineering/ask-matt",
+    "./crates/skills/skills/engineering/diagnosing-bugs",
+    "./crates/skills/skills/engineering/grill-with-docs",
+    "./crates/skills/skills/engineering/triage",
+    "./crates/skills/skills/engineering/improve-codebase-architecture",
+    "./crates/skills/skills/engineering/setup-matt-pocock-skills",
+    "./crates/skills/skills/engineering/tdd",
+    "./crates/skills/skills/engineering/to-spec",
+    "./crates/skills/skills/engineering/to-tickets",
+    "./crates/skills/skills/engineering/wayfinder",
+    "./crates/skills/skills/engineering/implement",
+    "./crates/skills/skills/engineering/implement-spec",
+    "./crates/skills/skills/engineering/prototype",
+    "./crates/skills/skills/engineering/research",
+    "./crates/skills/skills/engineering/domain-modeling",
+    "./crates/skills/skills/engineering/codebase-design",
+    "./crates/skills/skills/engineering/code-review",
+    "./crates/skills/skills/engineering/pr",
+    "./crates/skills/skills/engineering/retro",
+    "./crates/skills/skills/engineering/wizard",
+    "./crates/skills/skills/productivity/grill-me",
+    "./crates/skills/skills/productivity/grilling",
+    "./crates/skills/skills/productivity/handoff",
+    "./crates/skills/skills/productivity/teach",
+    "./crates/skills/skills/productivity/to-questionnaire",
+    "./crates/skills/skills/productivity/wait-what",
+    "./crates/skills/skills/productivity/writing-for-agents"
+  ]
 }

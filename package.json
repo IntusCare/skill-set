@@ -1,6 +1,5 @@
 {
   "name": "skill-set",
-  "version": "0.1.0",
   "private": true,
   "packageManager": "bun@1.4.2",
   "workspaces": [
@@ -9,8 +8,7 @@
   "scripts": {
     "build": "turbo run build",
     "test": "turbo run test",
-    "typecheck": "turbo run typecheck",
-    "sync:skills": "bun scripts/sync-skills.ts"
+    "typecheck": "turbo run typecheck"
   },
   "devDependencies": {
     "turbo": "^2"

@@ -11,5 +11,12 @@
     "code-review",
     "domain-modeling",
     "productivity"
+  ],
+  "requiredPlugins": [
+    {
+      "source": "github",
+      "repo": "mattpocock/skills",
+      "sha": "7a030a8b0dcaa601bb0dda9aaf174affb3d61145"
+    }
   ]
 }
