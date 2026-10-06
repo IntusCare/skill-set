@@ -23,10 +23,10 @@ This repo is a plugin for Claude Code, Devin, and OpenAI Codex.
 | Devin | `.devin-plugin/plugin.json` | Customize → Plugins → Add plugin → From repository → `IntusCare/skill-set`, or `devin plugins install IntusCare/skill-set` |
 | OpenAI Codex | `.codex-plugin/plugin.json`, `.agents/plugins/marketplace.json` | `codex plugin marketplace add IntusCare/skill-set`, then install `skill-set` from `/plugins` |
 
-Skills are not copied into this repo. Each manifest points at the pinned `crates/skills` submodule:
+Skills are not copied into this repo. Each manifest points at the pinned `crates/mattpocock` submodule:
 
-- **Claude Code** lists the promoted skill directories under `crates/skills/skills/` (mirrors `crates/skills/.claude-plugin/plugin.json`).
-- **Codex** takes a single `skills` path, so it points at `crates/skills/skills/engineering/` only.
+- **Claude Code** lists the promoted skill directories under `crates/mattpocock/skills/` (mirrors `crates/mattpocock/.claude-plugin/plugin.json`).
+- **Codex** takes a single `skills` path, so it points at `crates/mattpocock/skills/engineering/` only.
 - **Devin** depends on `mattpocock/skills` at the submodule's commit through `requiredPlugins`.
 
 After bumping the submodule, update the Claude `skills` list and the Devin `requiredPlugins` sha to match.
