@@ -12,6 +12,7 @@ Bun + Turborepo monorepo; every directory under `crates/` is a workspace. Comman
 ## Tooling
 
 - Bun is the package manager (`packageManager` in `package.json`); `bun.lock` is the lockfile.
+- Biome (`biome.json`) formats and lints the repo, excluding the submodules; run `bun run check:fix` before committing.
 - Code owned by this repo goes in a new workspace under `crates/`, picked up automatically by the `crates/*` glob.
 - New skills go in `crates/skill-set/skills/<name>/`; register each in `.claude-plugin/plugin.json` and symlink it into `.agents/skills/<name>` (see `README.md`).
 

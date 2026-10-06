@@ -24,10 +24,7 @@
     "longDescription": "Intus Care's curated agent skill set for real engineering: grilling, spec/ticket flows, TDD, code review, domain modelling and more.",
     "developerName": "Intus Care",
     "category": "Coding",
-    "capabilities": [
-      "Interactive",
-      "Write"
-    ],
+    "capabilities": ["Interactive", "Write"],
     "websiteURL": "https://github.com/IntusCare/skill-set"
   }
 }

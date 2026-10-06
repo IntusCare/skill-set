@@ -11,6 +11,8 @@ bun install
 bun run build      # turbo run build
 bun run test       # turbo run test
 bun run typecheck  # turbo run typecheck
+bun run check      # biome check (format + lint + import sorting)
+bun run check:fix  # biome check --write
 ```
 
 ## Installing as an agent extension
