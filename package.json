@@ -8,9 +8,11 @@
   "scripts": {
     "build": "turbo run build",
     "test": "turbo run test",
-    "typecheck": "turbo run typecheck"
+    "typecheck": "turbo run typecheck",
+    "test:unit": "vitest run"
   },
   "devDependencies": {
-    "turbo": "^2"
+    "turbo": "^2",
+    "vitest": "^5.0.3"
   }
 }
