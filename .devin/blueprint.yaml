@@ -1,0 +1,23 @@
+# https://docs.devin.ai/onboard-devin/environment-yaml
+# Commands run from the repo root.
+initialize: |
+  # Every new shell exports PRIMARY_REPO (org secret if set, else the repo under ~/repos) and starts there.
+  cat > "$HOME/.primary_repo.sh" <<'EOF'
+  # Set PRIMARY_REPO (org secret/env var wins, else the repo under ~/repos) and start new shells there.
+  _devin_secrets="${DEVIN_DIR:-/opt/.devin}/.devin_secrets.sh"
+  [ -z "$PRIMARY_REPO" ] && [ -f "$_devin_secrets" ] && . "$_devin_secrets"
+  unset _devin_secrets
+  if [ -z "$PRIMARY_REPO" ]; then
+    for d in "$HOME"/repos/*/; do
+      [ -d "$d/.git" ] && PRIMARY_REPO="${d%/}" && break
+    done
+  fi
+  case "$PRIMARY_REPO" in ""|/*) ;; *) PRIMARY_REPO="$HOME/repos/${PRIMARY_REPO##*/}" ;; esac
+  export PRIMARY_REPO
+  if [ -n "$PRIMARY_REPO" ] && [ "$PWD" = "$HOME" ] && [ -d "$PRIMARY_REPO" ]; then cd "$PRIMARY_REPO"; fi
+  EOF
+  grep -q 'primary_repo.sh' "$HOME/.profile" || echo '[ -f "$HOME/.primary_repo.sh" ] && . "$HOME/.primary_repo.sh"' >> "$HOME/.profile"
+knowledge:
+  - name: startup
+    contents: |
+      $PRIMARY_REPO is the checked-out repo root (org secret PRIMARY_REPO overrides auto-detection); new shells start there. Commands run with an explicit workdir are unaffected.
