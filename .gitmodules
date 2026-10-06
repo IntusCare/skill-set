@@ -1,3 +1,6 @@
 [submodule "crates/skills"]
 	path = crates/skills
 	url = https://github.com/mattpocock/skills.git
+[submodule "crates/gstack"]
+	path = crates/gstack
+	url = https://github.com/garrytan/gstack.git
