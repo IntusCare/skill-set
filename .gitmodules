@@ -1,0 +1,3 @@
+[submodule "crates/gstack"]
+	path = crates/gstack
+	url = https://github.com/garrytan/gstack.git
