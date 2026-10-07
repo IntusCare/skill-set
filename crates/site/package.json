@@ -1,0 +1,16 @@
+{
+  "name": "@intuscare/site",
+  "version": "0.0.0",
+  "private": true,
+  "description": "Static GitHub Pages site listing the skills shipped by this plugin",
+  "type": "module",
+  "scripts": {
+    "build": "bun run src/build.ts",
+    "test": "bun test",
+    "typecheck": "tsc --noEmit"
+  },
+  "devDependencies": {
+    "@types/bun": "^1.2.0",
+    "typescript": "^5.4.0"
+  }
+}
